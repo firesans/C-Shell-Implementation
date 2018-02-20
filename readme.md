@@ -2,8 +2,7 @@ Assignment : IMPLEMENTING SHELL IN C
 ------------------------------------
 
 AIM :  The goal of the project is to create a user defined interactive shell program that can
-       create and manage new processes. The shell should be able to create a process out of a
-       system program like emacs, vi or any user-defined executable.
+       create and manage new processes.
 
 Implemented commands:
 ---------------------
@@ -14,18 +13,16 @@ Implemented commands:
 - pinfo
 - All other commands like emacs, vi and so on. The shell can
   execute them either in the background or in the foreground.
+- Implementation of piping and redirection
+- setenv 
+- quit
+- Ctrl+Z and various other background functioning 
 
-Compilation : gcc spec1.c
+Compilation : make 
 -----------
 
-Running :       ./a.out
+Running : ./main
 -------
-
-Explanation of code :
---------------------
-At the starting of each iteration, the prompt is printed using the getenv and gethostname system calls. The current working directory is appended to 
-the prompt.
-The input given is tokenized (split) using a specific delimitor using 'strtok' command.
 
 PWD : 
 ----
@@ -53,5 +50,13 @@ Any command invoked with "&" is treated as background command. This implies that
 PINFO:
 ------
 When the command "pinfo" is entered, the result output displays the process id and the required process information is displayed along with the execution path.
+
+PIPING AND REDIRECTION :
+----------------------
+Piping '|' and input-output redirection has been implemented. You can simply give the arguments containing pipe and redirection and can view the output. I have specifically added fucntionality for the "grep" command.
+
+VARIOUS OTHER SPECS:
+-------------------
+Various other specifications have been added and can be checked from the various spec files .
 
 
